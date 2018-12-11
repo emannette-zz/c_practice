@@ -1,7 +1,19 @@
 #include <stdio.h>
+#include "arrays.c"
+
+int basic();
 
 int main() {
-	// printf needs <stdio.h>
+	printf("Calling the basic method!\n");
+	basic();
+	printf("Calling the array method!\n");
+	// array(arraySize, startValue, increment)
+	array(5, 5, 10);
+
+}
+
+int basic() {
+		// printf needs <stdio.h>
 	printf("Hello World!\n");
 
 	#define BOOL char
