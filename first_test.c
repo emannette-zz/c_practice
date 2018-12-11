@@ -9,6 +9,7 @@ int main() {
 	printf("Calling the array method!\n");
 	// array(arraySize, startValue, increment)
 	array(5, 5, 10);
+	multiDimArr();
 
 }
 
