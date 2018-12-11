@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <time.h>
 
 
 void array(int size, int baseValue, int increment) {
@@ -62,14 +63,17 @@ void multiDimArr() {
 
 	int x = 0, y = 0, scores = 8, numberOfStudents = 10;
 	int grades[numberOfStudents][scores];
-	for (x; x < numberOfStudents; x++) {
-		for (y; y < scores; y++) {
+	srand(time(NULL));
+	while (x < numberOfStudents) {
+		while (y < scores) {
 			const int grade = (rand() % (100 + 1 - 50)) + 50;
-			printf("THE GRADE %i\n", grade);
 			grades[x][y] = grade;
+			y++;
 		}
-		printf("X, %i\n", x);
+		x++;
+		y = 0;
 	}
+
 	printf("The length of the grades array is %i\n", sizeof(grades)/sizeof(grades[0][0]));
 	printf("The number of students is %i\n", sizeof(grades)/sizeof(grades[0]));
 	printf("The number of grades per student is %i\n", sizeof((grades)[0])/sizeof(grades[0][0]));
@@ -80,7 +84,6 @@ void multiDimArr() {
 	for (x = 0; x < row; x++) {
 		int sum = 0;
 		for (y = 0; y < col; y++) {
-			printf("The grade is %i\n", grades[x][y]);
 			sum += grades[x][y];
 		}
 		average = sum / col;

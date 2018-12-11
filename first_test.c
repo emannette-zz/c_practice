@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include "arrays.c"
 
+
 int basic();
 
 int main() {
