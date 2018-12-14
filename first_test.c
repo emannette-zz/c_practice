@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include "arrays.c"
+#include "strings.c"
 
 
 int basic();
@@ -7,10 +8,12 @@ int basic();
 int main() {
 	printf("Calling the basic method!\n");
 	basic();
-	printf("Calling the array method!\n");
+	printf("Calling the arrays method!\n");
 	// array(arraySize, startValue, increment)
 	array(5, 5, 10);
 	multiDimArr();
+	printf("Calling the strings method!\n");
+	string();
 
 }
 
