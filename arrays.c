@@ -14,7 +14,7 @@ void array(int size, int baseValue, int increment) {
 	* define two iterators
 	* 	one to keep track of the array index
 	* 	the other to loop through the array after it is built
-	* define a baseValue which will increment by a 
+	* define a baseValue which will increment by a
 	*/
 	int i = 0, j = 0;
 	size_t n;
@@ -38,14 +38,14 @@ void array(int size, int baseValue, int increment) {
 		printf("The number at position %i is %i\n", j, numbers[j]);
 		j++;
 	}
-	
+
 
 }
 
 void multiDimArr() {
 	/* define a couple multi-dimensional arrays
 	* multi-dimensional arrays follow this syntax
-	* 
+	*
 	* 		  |---------|---------|---------|---------|
 	* 		  |  col 0  |  col 1  |  col 2  |  col 3  |
 	* 	------|---------|---------|---------|---------|
@@ -74,11 +74,11 @@ void multiDimArr() {
 		y = 0;
 	}
 
-	printf("The length of the grades array is %i\n", sizeof(grades)/sizeof(grades[0][0]));
-	printf("The number of students is %i\n", sizeof(grades)/sizeof(grades[0]));
-	printf("The number of grades per student is %i\n", sizeof((grades)[0])/sizeof(grades[0][0]));
+	printf("The length of the grades array is %lu\n", sizeof(grades)/sizeof(grades[0][0]));
+	printf("The number of students is %lu\n", sizeof(grades)/sizeof(grades[0]));
+	printf("The number of grades per student is %lu\n", sizeof((grades)[0])/sizeof(grades[0][0]));
 
-	int row = sizeof(grades[0]) / sizeof(grades[0][0]), 
+	int row = sizeof(grades[0]) / sizeof(grades[0][0]),
 		col = sizeof(grades) / sizeof(grades[0]),
 		average = 0;
 	for (x = 0; x < row; x++) {
